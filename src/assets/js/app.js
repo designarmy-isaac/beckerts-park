@@ -30,8 +30,8 @@ function initPage(){
       leaf.e = $(this);
       leaf.a = leaf.e.data("anchor");
       leaf.r = leaf.e.data("rotate");
-      leaf.d = leaf.r + bump;
-      leaf.p = leaf.e.data("x"),
+      leaf.d = function() { return (leaf.a === "right" ? leaf.r - bump : leaf.r + bump)}; // If leaf is anchored on right, sets d (rotation after touch) to rotation minus bump distance,
+      leaf.p = leaf.e.data("x"),                                                          // if not (ie anchored on left), sets d to r plus bump distance)
       leaf.t = leaf.e.data("top"),
       leaves[i] = leaf;
 //      console.log(i, leaf.animateIn);
@@ -48,14 +48,19 @@ function initPage(){
         "transform": "rotate(" + leaf.r + "deg)"
       });
       if (leaf.a === "right") {
-        leaf.e.css("right", leaf.x);
+        leaf.e.css({
+          "right": leaf.p
+        });
       } else {
-        leaf.e.css("left", leaf.x);
+        leaf.e.css({
+          "left": leaf.p,
+//          "transform": "rotate(" + leaf.r + "deg) " + "scaleX(-1)"
+        });
       }
       
       leaves[i].e.hover(
         function() {
-          animateLeafTo(leaves[$(this).index()].e, 2.25, {rotation: leaves[$(this).index()].r - bump, ease:Elastic.easeOut} );
+          animateLeafTo(leaves[$(this).index()].e, 2.25, {rotation: leaves[$(this).index()].d, ease:Elastic.easeOut} );
         },
         function() {
           animateLeafTo(leaves[$(this).index()].e, 2.25, {rotation: leaves[$(this).index()].r, ease:Elastic.easeOut} );
