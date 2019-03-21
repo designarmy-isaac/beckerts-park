@@ -1,3 +1,5 @@
+/*global TweenMax, Elastic*/
+
 import $ from 'jquery';
 import 'what-input';
 
@@ -20,7 +22,7 @@ $(document).ready(initPage);
 function initPage(){
   
   var $leaves = $('.leaf'),
-        bump = 10,
+        bump = 5,
         leaves = [];
   
   
@@ -34,7 +36,6 @@ function initPage(){
       leaf.p = leaf.e.data("x"),                                                          // if not (ie anchored on left), sets d to r plus bump distance)
       leaf.t = leaf.e.data("top"),
       leaves[i] = leaf;
-//      console.log(i, leaf.animateIn);
     },leaves); 
   }
   
@@ -44,7 +45,7 @@ function initPage(){
       var leaf = leaves[i];
       leaf.e.css({
         "top": leaf.t,
-        "transform-origin": leaf.a + " center",
+        "transform-origin": leaf.a + " center", // set leaf's anchor
         "transform": "rotate(" + leaf.r + "deg)"
       });
       if (leaf.a === "right") {
@@ -54,16 +55,15 @@ function initPage(){
       } else {
         leaf.e.css({
           "left": leaf.p,
-//          "transform": "rotate(" + leaf.r + "deg) " + "scaleX(-1)"
         });
       }
       
-      leaves[i].e.hover(
+      leaf.e.hover(
         function() {
-          animateLeafTo(leaves[$(this).index()].e, 2.25, {rotation: leaves[$(this).index()].d, ease:Elastic.easeOut} );
+          animateLeafTo($(this), 2.25, {rotation: leaves[$(this).index()].d, ease:Elastic.easeOut} );
         },
         function() {
-          animateLeafTo(leaves[$(this).index()].e, 2.25, {rotation: leaves[$(this).index()].r, ease:Elastic.easeOut} );
+          animateLeafTo($(this), 2.25, {rotation: leaves[$(this).index()].r, ease:Elastic.easeOut} );
         }
       );
     }
