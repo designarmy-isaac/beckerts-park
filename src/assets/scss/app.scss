@@ -58,8 +58,13 @@
 @include foundation-flex-classes;
 @include foundation-visibility-classes;
 // @include foundation-prototype-classes;
-@import 'global/_layout.scss';
 
 // Motion UI
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+// Components
+@import 'components/_layout.scss';
+@import 'components/_typography.scss';
+@import 'components/_form.scss';
+@import 'components/_background.scss';

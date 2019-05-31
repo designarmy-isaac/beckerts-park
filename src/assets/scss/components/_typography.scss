@@ -1,0 +1,42 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+p,
+input[type=submit],
+label {
+  text-transform: uppercase;
+}
+
+h1, h2,
+.h1, .h2 {
+  letter-spacing: 3px;
+  margin-bottom: 2em;
+}
+
+h3,
+h4,
+h5,
+h6,
+.h3,
+.h4,
+.h5,
+.h6,
+input[type=submit],
+label {
+  letter-spacing: 2px;
+}
+
+
+h6,
+.h6 {
+  font-weight: 500;
+}

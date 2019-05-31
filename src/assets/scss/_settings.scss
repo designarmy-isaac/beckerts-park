@@ -66,22 +66,22 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(600);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #35489E,
   secondary: #F8B9CD,
-  success: #3adb76,
-  warning: #ffae00,
-  alert: #cc4b37,
+  success: #6bf59f,
+  warning: #fff46f,
+  alert: #f56c57,
 );
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #ffffff;
-$body-background: $white;
-$body-font-color: $black;
+$body-background: #0f4f56;
+$body-font-color: $white;
 $body-font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
@@ -132,27 +132,27 @@ $block-grid-max: 8;
 // ------------------
 
 $header-font-family: $body-font-family;
-$header-font-weight: $global-weight-normal;
+$header-font-weight: $global-weight-bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
-$header-lineheight: 1.4;
+$header-lineheight: 1.1;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
-    'h1': ('font-size': 24),
-    'h2': ('font-size': 20),
-    'h3': ('font-size': 19),
-    'h4': ('font-size': 18),
-    'h5': ('font-size': 17),
+    'h1': ('font-size': 20),
+    'h2': ('font-size': 18),
+    'h3': ('font-size': 16),
+    'h4': ('font-size': 16),
+    'h5': ('font-size': 16),
     'h6': ('font-size': 16),
   ),
   medium: (
-    'h1': ('font-size': 48),
-    'h2': ('font-size': 40),
-    'h3': ('font-size': 31),
-    'h4': ('font-size': 25),
-    'h5': ('font-size': 20),
+    'h1': ('font-size': 36),
+    'h2': ('font-size': 28),
+    'h3': ('font-size': 18),
+    'h4': ('font-size': 16),
+    'h5': ('font-size': 16),
     'h6': ('font-size': 16),
   ),
 );
@@ -280,19 +280,19 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // ----------
 
 $button-font-family: inherit;
-$button-padding: 0.85em 1em;
+$button-padding: 0.75em 1.2em 0.85em 1.35em;
 $button-margin: 0;
 $button-fill: solid;
 $button-background: $primary-color;
-$button-background-hover: scale-color($button-background, $lightness: -15%);
+$button-background-hover: scale-color($button-background, $lightness: +5%);
 $button-color: $white;
-$button-color-alt: $black;
+$button-color-alt: $primary-color;
 $button-radius: $global-radius;
 $button-hollow-border-width: 1px;
 $button-sizes: (
   tiny: 0.6rem,
   small: 0.75rem,
-  default: 0.9rem,
+  default: 1rem,
   large: 1.25rem,
 );
 $button-palette: $foundation-palette;
@@ -415,19 +415,19 @@ $fieldset-padding: rem-calc(20);
 $fieldset-margin: rem-calc(18 0);
 $legend-padding: rem-calc(0 3);
 $form-spacing: rem-calc(8);
-$helptext-color: $black;
+$helptext-color: $white;
 $helptext-font-size: rem-calc(13);
 $helptext-font-style: italic;
-$input-prefix-color: $black;
+$input-prefix-color: $white;
 $input-prefix-background: $light-gray;
 $input-prefix-border: 1px solid $medium-gray;
 $input-prefix-padding: 1rem;
-$form-label-color: $black;
-$form-label-font-size: rem-calc(14);
+$form-label-color: $white;
+$form-label-font-size: rem-calc(18);
 $form-label-font-weight: $global-weight-normal;
 $form-label-line-height: 1.8;
-$select-background: $white;
-$select-triangle-color: $dark-gray;
+$select-background: $primary-color;
+$select-triangle-color: $white;
 $select-radius: $global-radius;
 $input-color: $body-font-color;
 $input-placeholder-color: $body-font-color;
@@ -435,11 +435,11 @@ $input-font-family: inherit;
 $input-font-size: rem-calc(16);
 $input-font-weight: $global-weight-normal;
 $input-line-height: $global-lineheight;
-$input-background: none;
-$input-background-focus: none;
+$input-background: rgba(53,72,158,0);
+$input-background-focus: rgba(53,72,158,0);
 $input-background-disabled: none;
-$input-border: none;
-$input-border-focus: none;
+$input-border: 0;
+$input-border-focus: 0;
 $input-padding: $form-spacing / 2;
 $input-shadow: none;
 $input-shadow-focus: none;

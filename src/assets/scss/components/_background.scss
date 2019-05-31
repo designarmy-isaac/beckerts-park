@@ -1,0 +1,34 @@
+#background {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 0;
+  img {
+    position: absolute;
+  }
+}
+
+.leaf-style-1 {
+  height: auto;
+  max-height: 8%;
+  width: auto;
+  max-width: 12%;
+}
+.leaf-style-2 {
+  height: auto;
+  max-height: 20%;
+  width: auto;
+  max-width: 30%;
+}
+.leaf-style-3 {
+  height: auto;
+  max-height: 20%;
+  width: auto;
+  max-width: 30%;
+}
+.leaf-style-5 {
+  height: auto;
+  max-height: 10%;
+  width: auto;
+  max-width: 15%;
+}
