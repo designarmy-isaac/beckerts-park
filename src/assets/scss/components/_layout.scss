@@ -24,7 +24,7 @@ html, body {
 }
 
 .main {
-//  display: none;
+  display: none;
   
   min-height: 100%;
   max-width: rem-calc(600);
@@ -53,7 +53,11 @@ html, body {
     margin-bottom: 1rem;
   }
   img {
-    height: rem-calc(56);
-    width: rem-calc(56);
-  }
+    height: rem-calc(36);
+    width: rem-calc(36);
+    @include breakpoint(large) {
+      height: rem-calc(56);
+      width: rem-calc(56);
+    }
+  } 
 }

@@ -30,11 +30,13 @@ function initPage(){
     $leaves.each(function(i) {
       var leaf = {};
       leaf.e = $(this);
+      leaf.sy = leaf.e.data("scale-y");
       leaf.a = leaf.e.data("anchor");
       leaf.r = leaf.e.data("rotate");
       leaf.d = function() { return (leaf.a === "right" ? leaf.r - bump : leaf.r + bump)}; // If leaf is anchored on right, sets d (rotation after touch) to rotation minus bump distance,
       leaf.p = leaf.e.data("x"),                                                          // if not (ie anchored on left), sets d to r plus bump distance)
       leaf.t = leaf.e.data("top"),
+      leaf.b = leaf.e.data("bottom"),
       leaves[i] = leaf;
     },leaves); 
   }
@@ -45,8 +47,9 @@ function initPage(){
       var leaf = leaves[i];
       leaf.e.css({
         "top": leaf.t,
+        "bottom": leaf.b,
         "transform-origin": leaf.a + " center", // set leaf's anchor
-        "transform": "rotate(" + leaf.r + "deg)"
+        "transform": "scaleY(" + leaf.sy + ") rotate(" + leaf.r + "deg)"
       });
       if (leaf.a === "right") {
         leaf.e.css({

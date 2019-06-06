@@ -8,21 +8,32 @@
   }
 }
 
+.dot {
+  height: auto;
+  max-height: 10%;
+}
+
 .leaf-style-1 {
   height: auto;
-  max-height: 8%;
+  max-height: 6%;
   width: auto;
-  max-width: 12%;
+  max-width: 9%;
 }
 .leaf-style-2 {
   height: auto;
-  max-height: 20%;
+  max-height: 12%;
   width: auto;
-  max-width: 30%;
+  max-width: 18%;
 }
 .leaf-style-3 {
   height: auto;
-  max-height: 20%;
+  max-height: 12%;
+  width: auto;
+  max-width: 18%;
+}
+.leaf-style-4 {
+  height: auto;
+  max-height: 16%;
   width: auto;
   max-width: 30%;
 }
@@ -31,4 +42,63 @@
   max-height: 10%;
   width: auto;
   max-width: 15%;
+}
+.leaf-style-6 {
+  height: auto;
+  max-height: 40%;
+  width: auto;
+  max-width: 60%;
+}
+
+.leaf-style-7 {
+  height: auto;
+  max-height: 15%;
+  width: auto;
+  max-width: 28%;
+  
+}
+
+.leaf-style-8 {
+  height: auto;
+  max-height: 15%;
+  width: auto;
+  max-width: 21%;
+}
+
+.leaf-style-9 {
+  height: auto;
+  max-height: 26%;
+  width: auto;
+  max-width: 39%;
+}
+
+.leaf-style-10 {
+  height: auto;
+  max-height: 35%;
+  width: auto;
+  max-width: 48%;
+}
+
+.leaf-style-e1 {
+  height: auto;
+  max-height: 12%;
+  width: auto;
+  max-width: 18%;
+}
+
+.leaf-style-e2 {
+  height: auto;
+  max-height: 42%;
+  width: auto;
+  max-width: 63%;
+}
+.leaf-style-e4 {
+  height: auto;
+  width: auto;
+  max-width: 63%;
+}
+.leaf-style-e4b {
+  height: auto;
+  width: auto;
+  max-height: 43%;
 }

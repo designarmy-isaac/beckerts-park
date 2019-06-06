@@ -66,7 +66,7 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(600);
+$global-width: rem-calc(540);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #35489E,
@@ -108,7 +108,7 @@ $print-hrefs: true;
 $breakpoints: (
   small: 0,
   medium: 640px,
-  large: 1024px,
+  large: 1440px,
   xlarge: 1200px,
   xxlarge: 1440px,
 );
@@ -432,7 +432,7 @@ $select-radius: $global-radius;
 $input-color: $body-font-color;
 $input-placeholder-color: $body-font-color;
 $input-font-family: inherit;
-$input-font-size: rem-calc(16);
+$input-font-size: rem-calc(14);
 $input-font-weight: $global-weight-normal;
 $input-line-height: $global-lineheight;
 $input-background: rgba(53,72,158,0);
