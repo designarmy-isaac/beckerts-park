@@ -8,6 +8,10 @@
   transform: perspective(1px) translateY(-50%);
 }
 
+.no-hover {
+  pointer-events: none !important;
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -19,18 +23,20 @@ html, body {
 }
 
 .valign-center {
-  @include vertical-align();
+  position: absolute;
   pointer-events: none !important;
+  padding: 4rem 0;
+  width: 100%;
+  @media screen and (min-height: 700px) {
+    padding: 0;
+    @include vertical-align();
+  }
 }
 
-.main {
-  display: none;
-  
+.wrapper {
   min-height: 100%;
-  max-width: rem-calc(600);
   margin: 0 auto;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+  width: auto;
   pointer-events: none !important;
   z-index: 1;
   form,
@@ -41,7 +47,13 @@ html, body {
 }
 
 .logo {
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
+  width: 40%;
+  max-width: rem-calc(200);
+  @include breakpoint(medium) {
+    width: 20%;
+    max-width: rem-calc(240);
+  }
 }
 
 .social-icons {
@@ -56,8 +68,8 @@ html, body {
     height: rem-calc(36);
     width: rem-calc(36);
     @include breakpoint(large) {
-      height: rem-calc(56);
-      width: rem-calc(56);
+      height: rem-calc(42);
+      width: rem-calc(42);
     }
   } 
 }

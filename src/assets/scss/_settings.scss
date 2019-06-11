@@ -107,7 +107,7 @@ $print-hrefs: true;
 
 $breakpoints: (
   small: 0,
-  medium: 640px,
+  medium: 768px,
   large: 1440px,
   xlarge: 1200px,
   xxlarge: 1440px,
@@ -148,6 +148,14 @@ $header-styles: (
     'h6': ('font-size': 16),
   ),
   medium: (
+    'h1': ('font-size': 28),
+    'h2': ('font-size': 22),
+    'h3': ('font-size': 18),
+    'h4': ('font-size': 16),
+    'h5': ('font-size': 16),
+    'h6': ('font-size': 16),
+  ),
+  large: (
     'h1': ('font-size': 36),
     'h2': ('font-size': 28),
     'h3': ('font-size': 18),
