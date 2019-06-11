@@ -25,10 +25,10 @@ html, body {
 .valign-center {
   position: absolute;
   pointer-events: none !important;
-  padding: 4rem 0;
+  padding: 4rem 1rem;
   width: 100%;
   @media screen and (min-height: 700px) {
-    padding: 0;
+    padding: 0 1rem;
     @include vertical-align();
   }
 }
@@ -66,10 +66,30 @@ html, body {
   }
   img {
     height: rem-calc(36);
-    width: rem-calc(36);
+    width: auto;
     @include breakpoint(large) {
       height: rem-calc(42);
       width: rem-calc(42);
     }
   } 
+}
+
+.footer {
+  position: fixed;
+  bottom: .5rem;
+  display: inline-block;
+}
+
+.footer-right {
+  right: .5rem;
+  img {
+    height: rem-calc(16);
+  }
+}
+
+.footer-left {
+  left: .25rem;
+  img {
+    height: rem-calc(24);
+  }
 }
