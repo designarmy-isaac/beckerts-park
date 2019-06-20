@@ -13,6 +13,7 @@ import webpack2      from 'webpack';
 import named         from 'vinyl-named';
 import uncss         from 'uncss';
 import autoprefixer  from 'autoprefixer';
+import RevAll        from 'gulp-rev-all';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -31,7 +32,7 @@ function loadConfig() {
 // Build the "dist" folder by running all of the below tasks
 // Sass must be run later so UnCSS can search for used classes in the others assets.
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, javascript, images, copy), sass));
+ gulp.series(clean, gulp.parallel(pages, javascript, images, copy), sass, revAll));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -136,6 +137,15 @@ function images() {
       $.imagemin.jpegtran({ progressive: true }),
     ])))
     .pipe(gulp.dest(PATHS.dist + '/assets/img'));
+}
+
+function revAll() {
+  return gulp.src(PATHS.dist + '/**')
+    .pipe($.if(PRODUCTION, RevAll.revision({
+      dontRenameFile: [/^\/favicon.ico$/g, '.html'],
+      dontUpdateReference: ['.html'],
+    })))
+    .pipe(gulp.dest(PATHS.dist));
 }
 
 // Start a server with BrowserSync to preview the site in
