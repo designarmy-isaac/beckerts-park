@@ -96,8 +96,8 @@ function initPage(){
   var PercentageID = $("#percent"),
           start = 0,
           end = 100,
-          durataion = time;
-          animateValue(PercentageID, start, end, durataion);
+          duration = time;
+          animateValue(PercentageID, start, end, duration);
 
   function animateValue(id, start, end, duration) {
 
