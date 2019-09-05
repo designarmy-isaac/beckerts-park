@@ -9,8 +9,7 @@ h6,
 .h3,
 .h4,
 .h5,
-.h6,
-p,
+.h6
 input[type=submit],
 label {
   text-transform: uppercase;
@@ -35,8 +34,26 @@ label {
   letter-spacing: 2px;
 }
 
+.text-uppercase {
+  text-transform: uppercase;
+}
+
 
 h6,
 .h6 {
   font-weight: 500;
+}
+
+p.small {
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 85%;
+  font-weight: bold;
+  max-width: 75%;
+  line-height: 1.25;
+  margin-bottom: 2.5rem;
+  @include breakpoint(medium) {
+    width: 50%;
+    max-width: 40rem;
+  }
 }
